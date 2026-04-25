@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ojas Dudhe - Data Scientist & AI Analyst</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -17,33 +20,9 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;cursor:none}
 body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,rgba(200,169,110,0.13) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;z-index:0}
 body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 85% 85% at 50% 50%,transparent 35%,rgba(12,14,26,0.75) 100%);pointer-events:none;z-index:0}
-
-/* ── CURSOR ── */
-#cur-dot{
-  width:10px;height:10px;
-  background:var(--gold);
-  border-radius:50%;
-  position:fixed;
-  top:0;left:0;
-  pointer-events:none;
-  z-index:9999;
-  will-change:transform;
-}
-#cur-ring{
-  width:36px;height:36px;
-  border:1.5px solid var(--gold);
-  border-radius:50%;
-  position:fixed;
-  top:0;left:0;
-  pointer-events:none;
-  z-index:9998;
-  opacity:.5;
-  will-change:transform;
-  transition:width .2s ease,height .2s ease,opacity .2s ease,border-color .2s ease;
-}
+#cur-dot{width:10px;height:10px;background:var(--gold);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;will-change:transform;}
+#cur-ring{width:36px;height:36px;border:1.5px solid var(--gold);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;opacity:.5;will-change:transform;transition:width .2s ease,height .2s ease,opacity .2s ease,border-color .2s ease;}
 #cur-ring.hovered{width:50px;height:50px;opacity:.25;border-color:var(--gold-light)}
-
-/* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 56px;display:flex;justify-content:space-between;align-items:center;transition:all .3s;background:linear-gradient(to bottom,rgba(12,14,26,.92),transparent)}
 nav.scrolled{background:rgba(12,14,26,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(12px)}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;letter-spacing:4px;color:var(--cream);text-decoration:none;text-transform:uppercase}
@@ -51,8 +30,6 @@ nav.scrolled{background:rgba(12,14,26,.97);border-bottom:1px solid var(--border)
 .nav-links{display:flex;gap:40px;list-style:none}
 .nav-links a{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .25s}
 .nav-links a:hover{color:var(--gold)}
-
-/* ── HERO ── */
 .hero{min-height:100vh;display:flex;align-items:center;padding:120px 56px 80px;position:relative;overflow:hidden;z-index:1}
 .glow{position:absolute;border-radius:50%;filter:blur(130px);pointer-events:none}
 .g1{width:480px;height:480px;background:rgba(200,169,110,.06);top:-80px;right:-80px}
@@ -79,8 +56,6 @@ h1.hero-h .out{-webkit-text-stroke:1px rgba(237,232,220,.22);color:transparent}
 .aside-l{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:2px}
 .scroll-ind{position:absolute;bottom:32px;left:56px;display:flex;align-items:center;gap:12px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);opacity:0;animation:fadeIn 1s ease forwards 1.2s;z-index:2}
 .s-bar{width:32px;height:1px;background:var(--gold-dim)}
-
-/* ── SECTIONS ── */
 section{position:relative;z-index:1;padding:92px 56px}
 .sl{display:flex;align-items:center;gap:12px;margin-bottom:10px}
 .sl-line{width:28px;height:1px;background:var(--gold)}
@@ -88,8 +63,6 @@ section{position:relative;z-index:1;padding:92px 56px}
 .sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5.5vw,68px);font-weight:600;letter-spacing:-.5px;line-height:1;margin-bottom:52px;color:var(--cream)}
 .sec-title em{font-style:italic;color:var(--gold)}
 hr.div{border:none;border-top:1px solid var(--border);margin:0 56px}
-
-/* ── ABOUT ── */
 #about{background:rgba(18,21,42,.65)}
 .about-g{display:grid;grid-template-columns:1.1fr .9fr;gap:68px;align-items:start}
 .about-b p{font-size:15px;line-height:1.85;color:var(--muted);margin-bottom:16px}
@@ -107,8 +80,6 @@ hr.div{border:none;border-top:1px solid var(--border);margin:0 56px}
 .pb-lbl{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dim);margin-bottom:5px}
 .pb-val{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--cream);line-height:1.2}
 .pb-sub{font-size:12px;color:var(--muted);margin-top:2px}
-
-/* ── SKILLS ── */
 #skills{background:var(--bg)}
 .sk-g{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
 .sk-b{background:var(--card);border:1px solid var(--border);padding:28px;transition:border-color .25s}
@@ -118,8 +89,6 @@ hr.div{border:none;border-top:1px solid var(--border);margin:0 56px}
 .pills{display:flex;flex-wrap:wrap;gap:6px}
 .pill{padding:4px 11px;border-radius:2px;font-size:11.5px;color:var(--muted);background:rgba(255,255,255,.03);border:1px solid var(--border);transition:all .2s}
 .pill:hover{color:var(--cream);border-color:var(--gold-dim)}
-
-/* ── PROJECTS ── */
 #projects{background:rgba(18,21,42,.65)}
 .pj-g{display:grid;grid-template-columns:repeat(2,1fr);gap:3px}
 .pj-c{background:var(--card);border:1px solid var(--border);padding:32px;position:relative;transition:border-color .3s;overflow:hidden}
@@ -134,8 +103,6 @@ hr.div{border:none;border-top:1px solid var(--border);margin:0 56px}
 .tech-r{display:flex;flex-wrap:wrap;gap:5px}
 .tech{padding:3px 9px;border-radius:2px;font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:1px;text-transform:uppercase;background:rgba(107,184,176,.08);color:var(--teal);border:1px solid rgba(107,184,176,.2)}
 .pj-vis{height:170px;border:1px solid var(--border);border-radius:2px;background:radial-gradient(ellipse at center,rgba(200,169,110,.06),transparent 70%);display:flex;align-items:center;justify-content:center;font-size:52px}
-
-/* ── EXPERIENCE ── */
 #experience{background:var(--bg)}
 .exp-lay{display:grid;grid-template-columns:210px 1fr;gap:0}
 .exp-nav{border-right:1px solid var(--border)}
@@ -155,8 +122,6 @@ hr.div{border:none;border-top:1px solid var(--border);margin:0 56px}
 .exp-m{background:var(--card);border:1px solid var(--border);padding:12px 18px;text-align:center}
 .exp-mn{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--gold);line-height:1}
 .exp-ml{font-family:'JetBrains Mono',monospace;font-size:7.5px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:3px}
-
-/* ── COFFEE ── */
 #coffee{background:rgba(18,21,42,.65)}
 .coffee-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .coffee-text h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--cream);margin-bottom:12px}
@@ -172,14 +137,10 @@ hr.div{border:none;border-top:1px solid var(--border);margin:0 56px}
 .coffee-card-body p{font-size:13.5px;color:var(--muted);line-height:1.65;margin-bottom:18px}
 .coffee-link{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--gold);color:var(--bg);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;border-radius:2px;transition:background .2s;cursor:none}
 .coffee-link:hover{background:var(--gold-light)}
-
-/* ── CV BAND ── */
 .cv-band{background:var(--card);border-top:1px solid var(--gold-dim);border-bottom:1px solid var(--border);padding:44px 56px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}
 .cv-band h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--cream);margin-bottom:5px}
 .cv-band p{font-size:13px;color:var(--muted)}
 .cv-bs{display:flex;gap:10px}
-
-/* ── CONTACT ── */
 #contact{background:var(--bg);text-align:center}
 .ch{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,8vw,96px);font-weight:600;line-height:.95;color:var(--cream);margin-bottom:18px}
 .ch em{font-style:italic;color:var(--gold)}
@@ -187,20 +148,14 @@ hr.div{border:none;border-top:1px solid var(--border);margin:0 56px}
 .c-row{display:flex;justify-content:center;gap:3px;flex-wrap:wrap;margin-bottom:44px}
 .c-item{display:flex;align-items:center;gap:9px;padding:13px 22px;background:var(--card);border:1px solid var(--border);text-decoration:none;color:var(--muted);font-size:13px;transition:all .2s;cursor:none}
 .c-item:hover{border-color:var(--gold-dim);color:var(--gold)}
-
-/* ── FOOTER ── */
 footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:24px 56px;display:flex;justify-content:space-between;align-items:center;background:var(--surface)}
 .fl{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--cream)}
 .fl span{color:var(--gold)}
 .ft{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:1.5px;color:var(--muted)}
-
-/* ── ANIMATIONS ── */
 @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}
 .reveal.visible{opacity:1;transform:none}
-
-/* ── RESPONSIVE ── */
 @media(max-width:900px){
   #cur-dot,#cur-ring{display:none}
   body{cursor:auto}
@@ -240,8 +195,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:24
 <section class="hero" id="home">
   <div class="glow g1"></div><div class="glow g2"></div>
   <div class="hero-in">
-    <div class="eyebrow"><div class="ey-line"></div><span class="ey-txt">Data Scientist &amp; AI Analyst - Sheffield, UK</span></div>
-    <h1 class="hero-h">OJAS<br><em>DUDHE</em><br><span class="out">AI &amp; DATA</span></h1>
+    <div class="eyebrow"><div class="ey-line"></div><span class="ey-txt">Data Scientist & AI Analyst - Sheffield, UK</span></div>
+    <h1 class="hero-h">OJAS<br><em>DUDHE</em><br><span class="out">AI & DATA</span></h1>
     <p class="hero-sub"><strong>MSc Artificial Intelligence</strong> graduate from the University of Sheffield - turning complex data into decisions that move businesses, institutions and ideas forward.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-g">View My Work</a>
@@ -273,8 +228,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:24
     </div>
     <div class="about-p">
       <div class="pb"><div class="pb-lbl">Postgraduate</div><div class="pb-val">MSc Artificial Intelligence</div><div class="pb-sub">University of Sheffield · Merit · 2025</div></div>
-      <div class="pb"><div class="pb-lbl">Undergraduate</div><div class="pb-val">BTech Electronics &amp; Telecomms</div><div class="pb-sub">Ramdeobaba University, Nagpur · 2024</div></div>
-      <div class="pb"><div class="pb-lbl">Location &amp; Eligibility</div><div class="pb-val" style="font-size:15px">Sheffield · London · Manchester</div><div class="pb-sub">Graduate Visa until 2028 · Open to Relocate</div></div>
+      <div class="pb"><div class="pb-lbl">Undergraduate</div><div class="pb-val">BTech Electronics & Telecomms</div><div class="pb-sub">Ramdeobaba University, Nagpur · 2024</div></div>
+      <div class="pb"><div class="pb-lbl">Location & Eligibility</div><div class="pb-val" style="font-size:15px">Sheffield · London · Manchester</div><div class="pb-sub">Graduate Visa until 2028 · Open to Relocate</div></div>
       <div class="pb"><div class="pb-lbl">Open To</div><div class="chips" style="margin-top:6px"><span class="chip cg">Data Science</span><span class="chip ct">Business Analysis</span><span class="chip cr">AI Roles</span><span class="chip cg">Graduate Schemes</span></div></div>
     </div>
   </div>
@@ -286,11 +241,11 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:24
   <div class="sl"><div class="sl-line"></div><span class="sl-tag">02 - Skills</span></div>
   <h2 class="sec-title">What I <em>Know</em></h2>
   <div class="sk-g reveal">
-    <div class="sk-b"><div class="sk-h g">Programming &amp; Data</div><div class="pills"><span class="pill">Python</span><span class="pill">SQL</span><span class="pill">pandas</span><span class="pill">NumPy</span><span class="pill">Scikit-learn</span><span class="pill">Matplotlib</span><span class="pill">Excel (Advanced)</span><span class="pill">Jupyter</span></div></div>
-    <div class="sk-b"><div class="sk-h t">Machine Learning &amp; AI</div><div class="pills"><span class="pill">TensorFlow</span><span class="pill">Deep Learning</span><span class="pill">NLP</span><span class="pill">LLMs</span><span class="pill">XGBoost</span><span class="pill">LSTM</span><span class="pill">CNN-RNN</span><span class="pill">Random Forest</span></div></div>
-    <div class="sk-b"><div class="sk-h r">Cloud &amp; Platforms</div><div class="pills"><span class="pill">AWS</span><span class="pill">Snowflake</span><span class="pill">BigQuery</span><span class="pill">ETL Pipelines</span><span class="pill">Power BI</span><span class="pill">Tableau</span><span class="pill">GitLab</span><span class="pill">Cloud Computing</span></div></div>
+    <div class="sk-b"><div class="sk-h g">Programming & Data</div><div class="pills"><span class="pill">Python</span><span class="pill">SQL</span><span class="pill">pandas</span><span class="pill">NumPy</span><span class="pill">Scikit-learn</span><span class="pill">Matplotlib</span><span class="pill">Excel (Advanced)</span><span class="pill">Jupyter</span></div></div>
+    <div class="sk-b"><div class="sk-h t">Machine Learning & AI</div><div class="pills"><span class="pill">TensorFlow</span><span class="pill">Deep Learning</span><span class="pill">NLP</span><span class="pill">LLMs</span><span class="pill">XGBoost</span><span class="pill">LSTM</span><span class="pill">CNN-RNN</span><span class="pill">Random Forest</span></div></div>
+    <div class="sk-b"><div class="sk-h r">Cloud & Platforms</div><div class="pills"><span class="pill">AWS</span><span class="pill">Snowflake</span><span class="pill">BigQuery</span><span class="pill">ETL Pipelines</span><span class="pill">Power BI</span><span class="pill">Tableau</span><span class="pill">GitLab</span><span class="pill">Cloud Computing</span></div></div>
     <div class="sk-b"><div class="sk-h g">Business Analysis</div><div class="pills"><span class="pill">Requirements Eng.</span><span class="pill">Process Mapping</span><span class="pill">Gap Analysis</span><span class="pill">KPI Design</span><span class="pill">Agile</span><span class="pill">Stakeholder Mgmt</span></div></div>
-    <div class="sk-b"><div class="sk-h t">Domain Knowledge</div><div class="pills"><span class="pill">Finance &amp; Macro</span><span class="pill">Geopolitics</span><span class="pill">Sports Analytics</span><span class="pill">Healthcare AI</span><span class="pill">Betting Markets</span><span class="pill">Data Governance</span></div></div>
+    <div class="sk-b"><div class="sk-h t">Domain Knowledge</div><div class="pills"><span class="pill">Finance & Macro</span><span class="pill">Geopolitics</span><span class="pill">Sports Analytics</span><span class="pill">Healthcare AI</span><span class="pill">Betting Markets</span><span class="pill">Data Governance</span></div></div>
     <div class="sk-b"><div class="sk-h r">Languages</div><div class="pills"><span class="pill">English (IELTS 8.0)</span><span class="pill">German</span><span class="pill">Hindi</span><span class="pill">Marathi</span></div></div>
   </div>
 </section>
@@ -335,7 +290,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:24
     <div class="pj-c">
       <div class="pj-idx">05</div>
       <div class="pj-cat">Macroeconomics · Research</div>
-      <div class="pj-name">Macroeconomic &amp; Financial Trend Analysis</div>
+      <div class="pj-name">Macroeconomic & Financial Trend Analysis</div>
       <div class="pj-desc">Daily structured analysis of global macroeconomic and geopolitical developments via the Financial Times. Pattern recognition across policy cycles, central bank decisions and market behaviour.</div>
       <div class="tech-r"><span class="tech">Financial Times</span><span class="tech">Pattern Recognition</span><span class="tech">Policy Analysis</span></div>
     </div>
@@ -351,14 +306,14 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:24
     <div class="exp-nav">
       <div class="exp-tab active" onclick="sw(this,'e1')"><div class="exp-tab-d">2024</div><div class="exp-tab-n">Ashtalaxmi Developers</div></div>
       <div class="exp-tab" onclick="sw(this,'e2')"><div class="exp-tab-d">2024</div><div class="exp-tab-n">RCOEM Research</div></div>
-      <div class="exp-tab" onclick="sw(this,'e3')"><div class="exp-tab-d">2024–25</div><div class="exp-tab-n">University of Sheffield</div></div>
+      <div class="exp-tab" onclick="sw(this,'e3')"><div class="exp-tab-d">2024-25</div><div class="exp-tab-n">University of Sheffield</div></div>
     </div>
     <div>
       <div class="exp-pan active" id="e1">
         <div class="exp-co">Ashtalaxmi Developers</div>
         <div class="exp-ro">Junior Business Analyst</div>
-        <div class="exp-lo">Nagpur, India · Jan 2024 – Dec 2024</div>
-        <div class="exp-de">Analyst across multiple concurrent construction projects. Built Power BI dashboards and automated reporting pipelines giving project managers real-time visibility. Developed a Python and Excel-based forecasting model for labour budgeting and procurement, replacing gut-feel decision making with structured, evidence-based planning.</div>
+        <div class="exp-lo">Nagpur, India · Jan 2024 - Dec 2024</div>
+        <div class="exp-de">Embedded analyst across multiple concurrent construction projects. Built Power BI dashboards and automated reporting pipelines giving project managers real-time visibility. Developed a Python and Excel-based forecasting model for labour budgeting and procurement, replacing gut-feel decision making with structured, evidence-based planning.</div>
         <div class="exp-ms">
           <div class="exp-m"><div class="exp-mn">15%</div><div class="exp-ml">Cost Reduction</div></div>
           <div class="exp-m"><div class="exp-mn">20%</div><div class="exp-ml">Fewer Delays</div></div>
@@ -369,13 +324,13 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:24
       <div class="exp-pan" id="e2">
         <div class="exp-co">RCOEM - Ramdeobaba University</div>
         <div class="exp-ro">Research Assistant · Computer Vision</div>
-        <div class="exp-lo">Nagpur, India · Jan 2024 – Jul 2024</div>
+        <div class="exp-lo">Nagpur, India · Jan 2024 - Jul 2024</div>
         <div class="exp-de">Developed a novel image denoising algorithm combining wavelet-based frequency domain techniques with spatial domain edge preservation in Python. Benchmarked against BM3D and NL-Means using PSNR and SSIM metrics - achieving superior edge retention. Presented findings at departmental research group meetings and contributed to technical documentation.</div>
       </div>
       <div class="exp-pan" id="e3">
         <div class="exp-co">University of Sheffield</div>
         <div class="exp-ro">MSc Artificial Intelligence - Merit</div>
-        <div class="exp-lo">Sheffield, UK · Sept 2024 – Sept 2025</div>
+        <div class="exp-lo">Sheffield, UK · Sept 2024 - Sept 2025</div>
         <div class="exp-de">Advanced study across machine learning, NLP, deep learning, neural networks and AI ethics. Completed research projects spanning healthcare AI, clinical NLP and sports analytics. Strong foundations in statistical modelling, Python pipeline engineering and communicating technical findings to non-technical audiences.</div>
       </div>
     </div>
@@ -390,14 +345,14 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:24
   <div class="coffee-inner reveal">
     <div class="coffee-text">
       <h3>Koffe Nagpur - A City's Coffee, Mapped.</h3>
-      <p>Outside of data and AI, I've spent a lot of time walking through Nagpur's growing café culture - ordering the same three drinks (cold brew, iced americano, pour-over) across every café I could find, and taking structured notes on pricing, quality, ambience and value.</p>
-      <p>What started as a personal curiosity became a <strong>consumer research project</strong> - and then a website. Koffe Nagpur documents and evaluates the city's café scene with the same analytical rigour I bring to everything else: consistent criteria, pattern recognition and honest insight.</p>
+      <p>Outside of data and AI, I've spent a lot of time walking through Nagpur's growing cafe culture - ordering the same three drinks (cold brew, iced americano, pour-over) across every cafe I could find, and taking structured notes on pricing, quality, ambience and value.</p>
+      <p>What started as a personal curiosity became a <strong>consumer research project</strong> - and then a website. Koffe Nagpur documents and evaluates the city's cafe scene with the same analytical rigour I bring to everything else: consistent criteria, pattern recognition and honest insight.</p>
       <p>It also happens to be where I drink my best coffee. Every good dataset starts with good fieldwork.</p>
       <div class="chips" style="margin-bottom:24px">
         <span class="chip cg">Consumer Research</span><span class="chip ct">Data Collection</span>
         <span class="chip cr">Nagpur</span><span class="chip cg">Self-Built</span>
       </div>
-      <a href="https://koffeenagpur.in" target="_blank" class="coffee-link">Visit koffeenagpur.in →</a>
+      <a href="https://koffeenagpur.in" target="_blank" class="coffee-link">Visit koffeenagpur.in</a>
     </div>
     <div class="coffee-card">
       <div class="coffee-card-top">
@@ -408,8 +363,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:24
         <div class="coffee-tag-row">
           <span class="chip cg">Cold Brew</span><span class="chip ct">Iced Americano</span><span class="chip cr">Pour-Over</span>
         </div>
-        <p>Nagpur's café scene reviewed with consistent criteria across pricing, quality and customer experience. Built and maintained by Ojas - because good data starts in the field.</p>
-        <a href="https://koffeenagpur.in" target="_blank" class="coffee-link">Explore the site →</a>
+        <p>Nagpur's cafe scene reviewed with consistent criteria across pricing, quality and customer experience. Built and maintained by Ojas - because good data starts in the field.</p>
+        <a href="https://koffeenagpur.in" target="_blank" class="coffee-link">Explore the site</a>
       </div>
     </div>
   </div>
@@ -440,54 +395,35 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:24
 <footer>
   <div class="fl">OJAS <span>DUDHE</span></div>
   <div class="ft">Sheffield, UK · Graduate Visa until 2028</div>
-  <div class="ft">Built with precision &amp; good coffee</div>
+  <div class="ft">Built with precision & good coffee</div>
 </footer>
 
 <script>
-// NAV
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>40));
-
-// Reveal
 document.querySelectorAll('.reveal').forEach(el=>
   new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:.08}).observe(el)
 );
-
-// Experience tabs
 function sw(tab,id){
   document.querySelectorAll('.exp-tab').forEach(t=>t.classList.remove('active'));
   document.querySelectorAll('.exp-pan').forEach(p=>p.classList.remove('active'));
   tab.classList.add('active');
   document.getElementById(id).classList.add('active');
 }
-
-// ── CURSOR ──
-const dot  = document.getElementById('cur-dot');
-const ring = document.getElementById('cur-ring');
-
-// Mouse position
-let mx=0, my=0;
-// Ring position (lagged)
-let rx=0, ry=0;
-
-document.addEventListener('mousemove', e => {
-  mx = e.clientX;
-  my = e.clientY;
-  // Dot follows instantly
-  dot.style.transform = `translate(${mx - 5}px, ${my - 5}px)`;
+const dot=document.getElementById('cur-dot');
+const ring=document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX;my=e.clientY;
+  dot.style.transform=`translate(${mx-5}px,${my-5}px)`;
 });
-
-// Ring animate loop
 (function loop(){
-  rx += (mx - rx) * 0.1;
-  ry += (my - ry) * 0.1;
-  ring.style.transform = `translate(${rx - 18}px, ${ry - 18}px)`;
+  rx+=(mx-rx)*.1;ry+=(my-ry)*.1;
+  ring.style.transform=`translate(${rx-18}px,${ry-18}px)`;
   requestAnimationFrame(loop);
 })();
-
-// Hover effects on interactive elements
-document.querySelectorAll('a, button, .btn, .exp-tab, .coffee-link, .pb, .pj-c, .sk-b').forEach(el=>{
-  el.addEventListener('mouseenter', ()=> ring.classList.add('hovered'));
-  el.addEventListener('mouseleave', ()=> ring.classList.remove('hovered'));
+document.querySelectorAll('a,button,.btn,.exp-tab,.coffee-link,.pb,.pj-c,.sk-b').forEach(el=>{
+  el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));
+  el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));
 });
 </script>
 </body>
